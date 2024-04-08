@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Cookie Page</title>
+  </head>
+  <body>
+    <script>
+      function createMyFirstCookie() {
+        document.cookie = "user=New Visitor; max-age=86400; path=/";
+        alert("Cookie set: " + document.cookie);
+      }
+
+      function showCookie() {
+        alert("Welcome! Your cookie is: " + document.cookie);
+      }
+
+      window.onload = function () {
+        if (document.cookie.indexOf("user=") == -1) {
+          createMyFirstCookie();
+        } else {
+          showCookie();
+        }
+      };
+    </script>
+
+    <h1></h1>
+    <p>Reload the page to make the cookie function</p>
+  </body>
+</html>
